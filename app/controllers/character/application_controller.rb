@@ -1,4 +1,2 @@
-module Character
-  class ApplicationController < ActionController::Base
-  end
+class Character::ApplicationController < ActionController::Base
 end
