@@ -3,7 +3,9 @@ ENV["RAILS_ENV"] = "test"
 
 require File.expand_path("../dummy/config/environment.rb",  __FILE__)
 require "rails/test_help"
-require "rspec/rails"
+require 'rspec/rails'
+require 'factory_girl'
+require 'database_cleaner'
 
 ActionMailer::Base.delivery_method = :test
 ActionMailer::Base.perform_deliveries = true
@@ -30,4 +32,16 @@ RSpec.configure do |config|
 
   # == Mock Framework
   config.mock_with :rspec
+  config.before(:suite) do
+    DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.clean_with(:truncation)
+  end
+
+  config.before(:each) do
+    DatabaseCleaner.start
+  end
+
+  config.after(:each) do
+    DatabaseCleaner.clean
+  end
 end
