@@ -1,3 +1,4 @@
 = semantic_form_for @profile, :url => profile_path, :html => { :method => :put }  do |f|
-  = f.inputs
+  = f.inputs do
+    = f.input :picture
   = f.buttons
