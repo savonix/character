@@ -7,13 +7,13 @@ require "character/version"
 Gem::Specification.new do |s|
   s.name        = "character"
   s.version     = Character::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Character."
-  s.description = "TODO: Description of Character."
+  s.authors     = ["Albert Lash"]
+  s.email       = ["albert.lash@gmail.com"]
+  s.homepage    = "www.docunext.com"
+  s.summary     = "Character supports user profiles."
+  s.description = "Character is alpha."
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.markdown"]
 
   s.add_development_dependency 'launchy'
   s.add_development_dependency 'rspec-rails', '~> 2.6'
@@ -23,7 +23,4 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'database_cleaner'
   s.add_development_dependency 'devise'
   s.add_dependency "rails", "~> 3.1"
-  # s.add_dependency "jquery-rails"
-
-  s.add_development_dependency "mysql2"
 end
